@@ -1,0 +1,57 @@
+#支持多数据源切换，建议使用
+spring:
+  hikari:
+    connection-timeout: 30000       # 等待连接池分配连接的最大时长（毫秒），超过这个时长还没可用的连接则发生SQLException， 默认:30秒
+    minimum-idle: 5                 # 最小连接数
+    maximum-pool-size: 20           # 最大连接数
+    auto-commit: true               # 自动提交
+    idle-timeout: 600000            # 连接超时的最大时长（毫秒），超时则被释放（retired），默认:10分钟
+    pool-name: DateSourceHikariCP     # 连接池名字
+    max-lifetime: 1800000           # 连接的生命时长（毫秒），超时而且没被使用则被释放（retired），默认:30分钟 1800000ms
+  datasource:
+    master:
+      url: V7/4JQ3ayuD7GIO5brVUKMJudGduggCCigcSNJiUVzIyVWw8ov5XLounbeTCKYyN
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      type: com.zaxxer.hikari.HikariDataSource
+      testOnBorrow: true
+      validationQuery: select 1 from dual
+      username: ZxuNHycEiGSTAABTNh3nmA==
+      password: jPUu0G0AeeN+HkInTtw1wA==
+
+    cluster:
+      - key: slave1
+        url: V7/4JQ3ayuD7GIO5brVUKMJudGduggCCigcSNJiUVzIyVWw8ov5XLounbeTCKYyN
+        idle-timeout: 20000
+        driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+        type: com.zaxxer.hikari.HikariDataSource
+        testOnBorrow: true
+        validationQuery: select 1 from dual
+        username: ZxuNHycEiGSTAABTNh3nmA==
+        password: jPUu0G0AeeN+HkInTtw1wA==
+
+#      - key: slave2
+#        url: V7/4JQ3ayuD7GIO5brVUKNi8oo/6jmO9+RSaHCHOd8eAvbg5yIHSYg0IV6B29OakBBqZU/nq5KXaztu4JcXguw==
+#        driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+#        type: com.zaxxer.hikari.HikariDataSource
+#        testOnBorrow: true
+#        validationQuery: select 1 from dual
+#        username: ZxuNHycEiGSTAABTNh3nmA==
+#        password: TlOe9leZ5myDnMueUekZgw==
+
+
+# ActiveMQ单机配置
+  activemq:
+    user: admin
+    password: admin
+    #    ActiveMQ的访问中心地址
+    broker-url: tcp://106.12.17.213:61616
+    #      fale 连接服务器  true 连接默认
+    in-memory: false
+    #    启动连接池
+    pool:
+      #     true表示使用连接池；false时，每发送一条数据创建一个连接
+      enabled: true
+      #      最大连接数
+      max-connections: 10
+      #     空闲的连接过期时间，默认为30秒
+      idle-timeout: 30000

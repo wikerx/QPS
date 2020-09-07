@@ -1,0 +1,46 @@
+# Tomcat
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    threads:
+      min-spare: 30
+      max: 1000
+  servlet:
+    context-path: /adminWeb
+  port: 8080
+
+spring:
+  # 环境 dev:开发 | sit:集成测试环境|pre:预生产环境|prd:生产环境
+  profiles:
+    active: dev
+  #    Tomcat下放置多个项目要处理一下
+  jmx:
+    enabled: false
+    #    tomcat下每个domain都不能一样
+    default-domain: adminWeb
+  mvc:
+    static-path-pattern: /static/**
+    view:
+      prefix: classpath:/templates/
+      suffix: .html
+
+  # jackson时间格式化
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+      enabled: true
+
+mybatis:
+  mapper-locations: classpath:/mybatis/mappers/*.xml
+  config-location:  classpath:/mybatis/config/mybatis-config.xml
+
+
+logging:
+  level:
+    org:
+      apache:
+        http: debug

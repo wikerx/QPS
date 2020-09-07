@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.scott</groupId>
+	<artifactId>qps-all</artifactId>
+	<version>v1.0</version>
+	<packaging>pom</packaging>
+
+	<!--这里的模块引入顺序就是加载顺序-->
+	<modules>
+		<!--公共工具类-->
+		<module>qps-common-utils</module>
+		<!--公共数据源-->
+		<module>qps-dataSource</module>
+		<!--公共实体-->
+		<module>qps-common-entity</module>
+		<!--公共model-->
+		<module>qps-common-model</module>
+		<!--服务层及mapper-->
+		<module>qps-common-service</module>
+		<!--服务实现及xml-->
+		<module>qps-common-impl</module>
+		<!--restFul API-->
+		<module>qps-api-restful</module>
+		<!--任务调度-->
+		<module>qps-task-schedule</module>
+		<!--控制层-->
+		<module>qps-modelWeb</module>
+	</modules>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.2.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		
+	</dependencies>
+
+</project>

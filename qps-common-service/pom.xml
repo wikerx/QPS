@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.scott</groupId>
+    <artifactId>qps-common-service</artifactId>
+    <version>v1.0</version>
+    <name>qps-common-service</name>
+    <packaging>jar</packaging>
+    <description>服务层</description>
+
+
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <mybatis.version>3.5.5</mybatis.version>
+        <!--以下是项目内部包结构-->
+        <qps-common-entity.version>v1.0</qps-common-entity.version>
+    </properties>
+
+    <dependencies>
+
+
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${mybatis.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <!--引入内部项目包-->
+        <dependency>
+            <groupId>com.scott</groupId>
+            <artifactId>qps-common-entity</artifactId>
+            <version>${qps-common-entity.version}</version>
+        </dependency>
+
+    </dependencies>
+
+</project>

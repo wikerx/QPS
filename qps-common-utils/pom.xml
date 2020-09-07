@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.scott</groupId>
+    <artifactId>qps-common-utils</artifactId>
+    <version>v1.0</version>
+    <name>qps-common-utils</name>
+    <packaging>jar</packaging>
+    <description>公共工具类</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <utils.version>v1.0</utils.version>
+        <HikariCP.version>3.3.0</HikariCP.version>
+        <commons-codec.version>1.8</commons-codec.version>
+        <commons-logging.version>1.2</commons-logging.version>
+        <slf4j.version>1.8.0-beta0</slf4j.version>
+        <spring-context.version>4.2.0.RELEASE</spring-context.version>
+        <springboot-web.version>2.2.2.RELEASE</springboot-web.version>
+        <springboot-aop.version>2.2.0.RELEASE</springboot-aop.version>
+        <springboot-mybatis.version>2.0.0</springboot-mybatis.version>
+        <mysql.version>8.0.11</mysql.version>
+        <commons-lang3.version>3.8</commons-lang3.version>
+        <hutool-all.version>5.4.1</hutool-all.version>
+        <fastjson.version>1.2.72</fastjson.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>${springboot-mybatis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.directory.studio</groupId>
+            <artifactId>org.apache.commons.codec</artifactId>
+            <version>${commons-codec.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>${commons-logging.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring-context.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool-all.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+
+    </dependencies>
+
+</project>

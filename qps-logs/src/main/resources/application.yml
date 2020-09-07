@@ -1,0 +1,10 @@
+# Tomcat
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    threads:
+      min-spare: 30
+      max: 1000
+  servlet:
+    context-path: /logs
+  port: 8083
