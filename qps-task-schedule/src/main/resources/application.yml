@@ -6,8 +6,8 @@ server:
       min-spare: 30
       max: 1000
   servlet:
-    context-path: /api
-  port: 8082
+    context-path: /adminWeb
+  port: 8080
 
 spring:
   # 环境 dev:开发 | sit:集成测试环境|pre:预生产环境|prd:生产环境
@@ -17,7 +17,7 @@ spring:
   jmx:
     enabled: false
     #    tomcat下每个domain都不能一样
-    default-domain: api
+    default-domain: adminWeb
   mvc:
     static-path-pattern: /static/**
     view:
@@ -37,6 +37,7 @@ spring:
 mybatis:
   mapper-locations: classpath:/mybatis/mappers/*.xml
   config-location:  classpath:/mybatis/config/mybatis-config.xml
+
 
 logging:
   level:

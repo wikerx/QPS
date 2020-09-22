@@ -1,0 +1,36 @@
+spring:
+  hikari:
+    connection-timeout: 30000       # 等待连接池分配连接的最大时长（毫秒），超过这个时长还没可用的连接则发生SQLException， 默认:30秒
+    minimum-idle: 5                 # 最小连接数
+    maximum-pool-size: 20           # 最大连接数
+    auto-commit: true               # 自动提交
+    idle-timeout: 600000            # 连接超时的最大时长（毫秒），超时则被释放（retired），默认:10分钟
+    pool-name: DateSourceHikariCP     # 连接池名字
+    max-lifetime: 1800000           # 连接的生命时长（毫秒），超时而且没被使用则被释放（retired），默认:30分钟 1800000ms
+  datasource:
+#    MySQL
+    master:
+      url: wx+mMKo5CYrVisNID6YLwhoiQ52DOzp/8aimqIvov2Th02yiOn63CnqSeDE+PfM5PFeTfC02QtAHFUWmaBh5yWlOEIVBkRKpV+JLW2teYPP6DTaLxC4R3DJvhOb9RJJcCE7H8gvC8eKDid7fLTegTAcfqyIl2+iHexA5F0EaVJlFAFeSbMaB4xWZc1+YXMx8kOJkxUJ2N+RwbDgBoSeA6Q3kb1mLNMcHp3/1mlsmvcY=
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      type: com.zaxxer.hikari.HikariDataSource
+      username: 0Eqv3RNZYy5ywLiesDOImQ==
+      password: HNO3ztFT//ExUabKRgcMCw==
+      HNO3ztFT//ExUabKRgcMCw==OnBorrow: true
+      validationQuery: select 1 from dual
+#    MySQL
+    cluster:
+      - key: slave1
+        url: wx+mMKo5CYrVisNID6YLwhoiQ52DOzp/8aimqIvov2Ty5WHfo4jQi+S/f4/MWyvFPFeTfC02QtAHFUWmaBh5yWlOEIVBkRKpV+JLW2teYPP6DTaLxC4R3DJvhOb9RJJcCE7H8gvC8eKDid7fLTegTAcfqyIl2+iHexA5F0EaVJlFAFeSbMaB4xWZc1+YXMx8kOJkxUJ2N+RwbDgBoSeA6Q3kb1mLNMcHp3/1mlsmvcY=
+        idle-timeout: 20000
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        type: com.zaxxer.hikari.HikariDataSource
+        username: 0Eqv3RNZYy5ywLiesDOImQ==
+        password: HNO3ztFT//ExUabKRgcMCw==
+#    MySQL
+      - key: slave2
+        url: wx+mMKo5CYrVisNID6YLwhoiQ52DOzp/8aimqIvov2QNw6fcfikpUgaFHsMx1cZuPFeTfC02QtAHFUWmaBh5yWlOEIVBkRKpV+JLW2teYPP6DTaLxC4R3DJvhOb9RJJcCE7H8gvC8eKDid7fLTegTAcfqyIl2+iHexA5F0EaVJlFAFeSbMaB4xWZc1+YXMx8kOJkxUJ2N+RwbDgBoSeA6Q3kb1mLNMcHp3/1mlsmvcY=
+        idle-timeout: 20000
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        type: com.zaxxer.hikari.HikariDataSource
+        username: 0Eqv3RNZYy5ywLiesDOImQ==
+        password: HNO3ztFT//ExUabKRgcMCw==
