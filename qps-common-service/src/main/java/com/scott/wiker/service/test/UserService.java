@@ -15,4 +15,8 @@ import java.util.List;
 public interface UserService {
 
     public List<Users> selectListUsers();
+
+    public List<Users> selectListUsersMaster();
+
+    public List<Users> selectListUsersSlave();
 }

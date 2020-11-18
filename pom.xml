@@ -10,6 +10,8 @@
 	<modules>
 		<!--公共工具类-->
 		<module>qps-common-utils</module>
+		<!--日志服务-->
+		<module>qps-logs</module>
 		<!--公共数据源-->
 		<module>qps-dataSource</module>
 		<!--公共实体-->
@@ -26,6 +28,8 @@
 		<module>qps-task-schedule</module>
 		<!--控制层-->
 		<module>qps-modelWeb</module>
+		<!--消息-缓存中间件-->
+		<module>qps-messageCenter</module>
 	</modules>
 
 	<parent>

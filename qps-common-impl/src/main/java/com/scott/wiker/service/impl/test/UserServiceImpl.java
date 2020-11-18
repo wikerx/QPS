@@ -20,13 +20,30 @@ import java.util.List;
  **/
 @Service
 @Slf4j
-@DataSource
 public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserMapper userMapper;
+
+
+    @DataSource
     @Override
     public List<Users> selectListUsers() {
+        return userMapper.selectListUsers();
+    }
+
+
+    @Override
+    @DataSource
+    public List<Users> selectListUsersMaster(){
+        return userMapper.selectListUsers();
+    }
+
+
+    @Override
+    @DataSource("slave1")
+    public List<Users> selectListUsersSlave(){
+
         return userMapper.selectListUsers();
     }
 }
