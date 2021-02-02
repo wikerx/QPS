@@ -23,9 +23,27 @@
         <jackson-databind.version>2.11.2</jackson-databind.version>
         <spring-boot-starter-amqp.version>2.3.5.RELEASE</spring-boot-starter-amqp.version>
         <lombok.version>1.18.0</lombok.version>
+        <fastjson.version>1.2.75</fastjson.version>
+        <netty-all.version>4.1.58.Final</netty-all.version>
+        <zookeeper.version>3.4.14</zookeeper.version>
+        <curator-recipes.version>2.12.0</curator-recipes.version>
+        <curator-framework.version>2.12.0</curator-framework.version>
+        <curator-client.version>2.12.0</curator-client.version>
+        <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
+        <springfox-swagger-ui.version>2.9.2</springfox-swagger-ui.version>
+        <swagger-annotations.version>1.5.19</swagger-annotations.version>
+
+        <!--以下是项目内部包结构-->
+        <qps-common-utils.version>v1.0</qps-common-utils.version>
+        <qps-common-entity.version>v1.0</qps-common-entity.version>
+        <qps-common-service.version>v1.0</qps-common-service.version>
+        <qps-common-impl.version>v1.0</qps-common-impl.version>
+
     </properties>
 
     <dependencies>
+
+        <!--引入内部项目包-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -53,7 +71,43 @@
             <artifactId>spring-boot-starter-amqp</artifactId>
             <version>${spring-boot-starter-amqp.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>${netty-all.version}</version>
+        </dependency>
+        <!--<dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>${zookeeper.version}</version>
+            <type>pom</type>
+        </dependency>-->
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-framework</artifactId>
+            <version>${curator-framework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+            <version>${curator-recipes.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-client</artifactId>
+            <version>${curator-client.version}</version>
+            <!--<exclusions>
+                <exclusion>
+                    <groupId>com.google.guava</groupId>
+                    <artifactId>guava</artifactId>
+                </exclusion>
+            </exclusions>-->
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -74,11 +128,12 @@
         </dependency>
     </dependencies>
 
+    <!-- 项目构建 -->
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
             </plugin>
         </plugins>
     </build>

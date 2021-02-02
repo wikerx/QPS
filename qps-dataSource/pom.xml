@@ -35,15 +35,6 @@
 
     </properties>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -60,17 +51,6 @@
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
             <scope>compile</scope>
-        </dependency>
-        <!--引入内部项目包-->
-        <dependency>
-            <groupId>com.scott</groupId>
-            <artifactId>qps-common-utils</artifactId>
-            <version>${qps-common-utils.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.scott</groupId>
-            <artifactId>qps-common-entity</artifactId>
-            <version>${qps-common-entity.version}</version>
         </dependency>
 
         <dependency>
@@ -104,12 +84,21 @@
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
         </dependency>
+
+        <!--引入内部项目包-->
         <dependency>
             <groupId>com.scott</groupId>
-            <artifactId>qps-common-service</artifactId>
-            <version>v1.0</version>
-            <scope>compile</scope>
+            <artifactId>qps-common-utils</artifactId>
+            <version>${qps-common-utils.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.scott</groupId>
+            <artifactId>qps-common-entity</artifactId>
+            <version>${qps-common-entity.version}</version>
+        </dependency>
+
     </dependencies>
+
+
 
 </project>

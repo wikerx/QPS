@@ -7,6 +7,18 @@
     <groupId>com.scott</groupId>
     <artifactId>qps-common-utils</artifactId>
     <version>v1.0</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>6</source>
+                    <target>6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <name>qps-common-utils</name>
     <packaging>jar</packaging>
     <description>公共工具类</description>
@@ -27,7 +39,7 @@
         <springboot-mybatis.version>2.0.0</springboot-mybatis.version>
         <mysql.version>8.0.11</mysql.version>
         <commons-lang3.version>3.8</commons-lang3.version>
-        <hutool-all.version>5.4.1</hutool-all.version>
+        <hutool-all.version>5.5.7</hutool-all.version>
         <fastjson.version>1.2.72</fastjson.version>
         <lombok.version>1.18.12</lombok.version>
     </properties>

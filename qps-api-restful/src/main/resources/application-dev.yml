@@ -34,3 +34,60 @@ spring:
         type: com.zaxxer.hikari.HikariDataSource
         username: 0Eqv3RNZYy5ywLiesDOImQ==
         password: HNO3ztFT//ExUabKRgcMCw==
+
+  #  redis集群配置
+  redis:
+    timeout: 6000ms
+    password: #scott@163
+    cluster:
+      max-redirects: 3  # 获取失败 最大重定向次数
+      nodes:
+        - 106.12.17.213:7001
+        - 106.12.17.213:7002
+        - 106.12.17.213:7003
+        - 106.12.17.213:7004
+        - 106.12.17.213:7005
+        - 106.12.17.213:7006
+    lettuce:
+      pool:
+        max-active: 1000  #连接池最大连接数（使用负值表示没有限制）
+        max-idle: 10 # 连接池中的最大空闲连接
+        min-idle: 5 # 连接池中的最小空闲连接
+        max-wait: -1 # 连接池最大阻塞等待时间（使用负值表示没有限制）
+
+  #  RabbitMQ单机配置
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: /
+    listener:
+      direct:
+        acknowledge-mode: manual
+      simple:
+        acknowledge-mode: manual #设置确认模式手工确认
+        concurrency: 10 #消费者最小数量
+        max-concurrency: 20 # 消费者最大数量
+        prefetch: 50
+        retry:
+          enabled: true # 是否支持重试
+#p配置zookeeper
+zoo:
+  keeper:
+    #开启标志
+    enabled: true
+    #服务器地址
+    server: 192.168.0.55:2181
+    #命名空间，被称为ZNode
+    namespace: mc_zk
+    #权限控制，加密
+    digest: smile:zmt123456
+    #会话超时时间
+    sessionTimeoutMs: 3000
+    #连接超时时间
+    connectionTimeoutMs: 60000
+    #最大重试次数
+    maxRetries: 2
+    #初始休眠时间
+    baseSleepTimeMs: 1000

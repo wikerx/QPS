@@ -79,6 +79,7 @@ public class AESUtil {
         String data = "test";
         String encryptData = encrypt(data);
         System.out.println("加密后数据：" + encryptData);
+        encryptData = "wx+mMKo5CYrVisNID6YLwhoiQ52DOzp/8aimqIvov2Ty5WHfo4jQi+S/f4/MWyvFPFeTfC02QtAHFUWmaBh5yWlOEIVBkRKpV+JLW2teYPP6DTaLxC4R3DJvhOb9RJJcCE7H8gvC8eKDid7fLTegTAcfqyIl2+iHexA5F0EaVJlFAFeSbMaB4xWZc1+YXMx8kOJkxUJ2N+RwbDgBoSeA6Q3kb1mLNMcHp3/1mlsmvcY=";
         System.out.println("解密后数据：" + decrypt(encryptData));
     }
 }

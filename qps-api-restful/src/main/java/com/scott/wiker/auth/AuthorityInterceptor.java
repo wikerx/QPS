@@ -28,7 +28,6 @@ public class AuthorityInterceptor extends HandlerInterceptorAdapter {
      */
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        log.info("=================preHandle===========");
         // 如果不是映射到方法直接通过
         if (!(handler instanceof HandlerMethod)) {
             return true;

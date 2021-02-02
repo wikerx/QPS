@@ -6,7 +6,7 @@ server:
       min-spare: 30
       max: 1000
   servlet:
-    context-path: /adminWeb
+    context-path: /quartz
   port: 8080
 
 spring:
@@ -17,7 +17,7 @@ spring:
   jmx:
     enabled: false
     #    tomcat下每个domain都不能一样
-    default-domain: adminWeb
+    default-domain: quartz
   mvc:
     static-path-pattern: /static/**
     view:

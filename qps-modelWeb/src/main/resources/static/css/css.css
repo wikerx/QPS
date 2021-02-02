@@ -1,0 +1,76 @@
+﻿body{font:12px/24px "宋体"; color:#444; }
+*{hide-focus: expression(this.hideFocus=true); /* for ie 5+ */outline: none; /* for firefox 1.5 + */}
+html,body,div,ul,li,ol,dl,dt,dd,p,a,span,img,table,tr,td,form,input,textarea,button,select,h1,h2,h3,h4,h5,h6{ margin:0px; padding:0px;}
+ul,li{ list-style:none;}
+img{ border:0; vertical-align:middle}
+i,em{font-style:normal;}
+.lt{ float:left;}
+.rt{ float:right;}
+a{color:#444;text-decoration:none;}
+a:hover{color:#e5a754;}
+input,button{ border:0; background:none;}
+.href{color:#e5a754;}
+.bodymain{ width:100%; height:auto; overflow:hidden; margin:0 auto;background: #E4E4E4 no-repeat center bottom;}
+.box{ width:1002px; height:auto; overflow:hidden; margin:0 auto;}
+.box .logo{ text-align:center; padding-top:10px; padding-bottom:10px;}
+.mian{ width:902px; height:auto; overflow:hidden; background:#fff;border-radius:5px; padding:30px 50px; margin-bottom:50px;opacity: 0.9;}
+.mian .bt{ font-size:25px; line-height:30px; padding-bottom:15px; font-weight:100; font-family:"Microsoft Yahei";}
+.mian .cn{ width:900px; height:auto; overflow:hidden; border-top:solid 1px #d5d5d5;border-left:solid 1px #d5d5d5; margin-bottom:30px;}
+.mian .cn td{ border-bottom:solid 1px #d5d5d5; border-right:solid 1px #d5d5d5; line-height:58px;;}
+.mian .cn td.w1{ font-size:14px; font-weight:bold; text-align:center;}
+.mian .cn td .text{ width:270px; height:38px; border:solid 1px #ccc;border-radius: 2px; line-height:38px; padding-left:0.5%; background: #fff;vertical-align: middle; -moz-box-shadow: inset 0 1px 3px #ddd;-webkit-box-shadow: inset 0 1px 3px #ddd; box-shadow: inset 0 1px 3px #ddd; color: #000; margin-left:20px; margin-right:10px;}
+.mian .cn td .w2{ color:#f00;}
+.mian .cn td input{ margin-left:20px;}
+.mian .cn td select{ margin-left:20px;}
+.mian .cn td textarea{ margin-left:20px;}
+.mian .cn td img{ padding-left:10px;}
+.mian .btn{ width:200px; height:60px; background:#d68702; line-height:60px; text-align:center; margin:0 auto 30px auto; display:block;border-radius:5px; font-size:20px; color:#fff; font-family:"Microsoft Yahei";}
+.mian .botm{ text-align:center;}
+
+.bottom{ background:#000000; text-align:center; line-height:30px; color:#fff; text-transform:uppercase;}
+
+#TplFloatPic_1 {right:2px;}
+.TplFloatSet a{margin:0;padding:0;display:block;}
+.money{width:902px; height:auto; overflow:hidden; background:#E5EFF0;border-radius:5px; padding:2px 5px; margin-bottom:5px;opacity: 0.9;}
+select{
+		width: 125px;
+		height: 40px;
+		border:solid 1px #ccc;
+		border-radius: 2px; 
+		line-height:38px; 
+		padding-left:0.5%; 
+		vertical-align: middle; 
+		-moz-box-shadow: inset 0 1px 3px #ddd;
+		-webkit-box-shadow: inset 0 1px 3px #ddd; 
+		box-shadow: inset 0 1px 3px #ddd;
+		color: #000;
+	}
+textarea{
+	width: 275px;
+	height: 80px;
+	border:solid 1px #ccc;
+	border-radius: 2px; 
+	line-height:38px; 
+	padding-left:0.5%; 
+	vertical-align: middle; 
+	-moz-box-shadow: inset 0 1px 3px #ddd;
+	-webkit-box-shadow: inset 0 1px 3px #ddd; 
+	box-shadow: inset 0 1px 3px #ddd;
+	color: #000;
+	}
+.sub{  
+	width: 200px;  
+	padding:8px;  
+	background-color: #15C39A;  
+	border-color: #15C39A;  
+	color: #fff;  
+	-moz-border-radius: 10px;  
+	-webkit-border-radius: 10px;  
+	border-radius: 3px; /* future proofing */  
+	-khtml-border-radius: 10px; /* for old Konqueror browsers */  
+	text-align: center;  
+	vertical-align: middle;  
+	border: 1px solid transparent;  
+	font-weight: 900;  
+	font-size:125%  
+     }  

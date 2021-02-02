@@ -33,11 +33,11 @@
         <lombok.version>1.18.12</lombok.version>
         <springfox-swagger-ui.version>3.0.0</springfox-swagger-ui.version>
         <guava.version>23.0</guava.version>
+        <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
+        <springfox-swagger-ui.version>2.9.2</springfox-swagger-ui.version>
+        <swagger-annotations.version>1.5.19</swagger-annotations.version>
 
         <!--以下是项目内部包结构-->
-        <qps-common-utils.version>v1.0</qps-common-utils.version>
-        <qps-common-entity.version>v1.0</qps-common-entity.version>
-        <qps-common-service.version>v1.0</qps-common-service.version>
         <qps-common-impl.version>v1.0</qps-common-impl.version>
     </properties>
 
@@ -67,22 +67,23 @@
             <version>${lombok.version}</version>
             <scope>compile</scope>
         </dependency>
+        <!-- Swagger2 核心依赖 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox-swagger2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${springfox-swagger-ui.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>${swagger-annotations.version}</version>
+        </dependency>
         <!--引入内部项目包-->
-        <dependency>
-            <groupId>com.scott</groupId>
-            <artifactId>qps-common-utils</artifactId>
-            <version>${qps-common-utils.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.scott</groupId>
-            <artifactId>qps-common-entity</artifactId>
-            <version>${qps-common-entity.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.scott</groupId>
-            <artifactId>qps-common-service</artifactId>
-            <version>${qps-common-service.version}</version>
-        </dependency>
         <dependency>
             <groupId>com.scott</groupId>
             <artifactId>qps-common-impl</artifactId>

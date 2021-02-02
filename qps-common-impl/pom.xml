@@ -31,34 +31,11 @@
         <lombok.version>1.18.12</lombok.version>
 
         <!--以下是项目内部包结构-->
-        <qps-common-utils.version>v1.0</qps-common-utils.version>
-        <qps-common-entity.version>v1.0</qps-common-entity.version>
-        <qps-dataSource.version>v1.0</qps-dataSource.version>
         <qps-common-service.version>v1.0</qps-common-service.version>
+        <qps-messageCenter.version>v1.0</qps-messageCenter.version>
     </properties>
 
     <dependencies>
-        <!--引入内部项目包-->
-        <dependency>
-            <groupId>com.scott</groupId>
-            <artifactId>qps-common-utils</artifactId>
-            <version>${qps-common-utils.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.scott</groupId>
-            <artifactId>qps-common-entity</artifactId>
-            <version>${qps-common-entity.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.scott</groupId>
-            <artifactId>qps-dataSource</artifactId>
-            <version>${qps-dataSource.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.scott</groupId>
-            <artifactId>qps-common-service</artifactId>
-            <version>${qps-common-service.version}</version>
-        </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -67,6 +44,18 @@
             <scope>compile</scope>
         </dependency>
 
+        <!--引入内部项目包-->
+        <dependency>
+            <groupId>com.scott</groupId>
+            <artifactId>qps-common-service</artifactId>
+            <version>${qps-common-service.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.scott</groupId>
+            <artifactId>qps-messageCenter</artifactId>
+            <version>${qps-messageCenter.version}</version>
+            <scope>compile</scope>
+        </dependency>
 
     </dependencies>
 

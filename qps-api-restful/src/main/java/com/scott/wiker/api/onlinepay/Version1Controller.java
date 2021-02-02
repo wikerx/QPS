@@ -6,6 +6,8 @@ import com.scott.wiker.auth.AuthRequired;
 import com.scott.wiker.entity.test.Users;
 import com.scott.wiker.restrictor.AnRateLimit;
 import com.scott.wiker.service.test.UserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author :Mr.薛
@@ -25,6 +26,7 @@ import java.util.concurrent.TimeUnit;
  * @status : 编写
  **/
 @Slf4j
+@Api("接口版本管理-v1")
 @ApiVersion(1)
 @RequestMapping(value = "online/{version}")
 @RestController
@@ -41,6 +43,7 @@ public class Version1Controller {
      * @return
      */
     @AuthRequired
+    @ApiOperation(value = "查询主节点数据-v1")
     @AnRateLimit(permitsPerSecond = 1,timeout = 5)
     @PostMapping(value = "test")
     public Object test(@RequestBody(required = false) String json){

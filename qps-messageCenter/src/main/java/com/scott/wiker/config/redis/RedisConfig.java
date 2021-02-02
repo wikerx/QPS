@@ -3,6 +3,7 @@ package com.scott.wiker.config.redis;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.scott.wiker.utils.DefaultStringConfig;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;
@@ -20,6 +21,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 import javax.annotation.Resource;
 import java.lang.reflect.Method;
+import java.time.Duration;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -39,7 +41,7 @@ public class RedisConfig extends CachingConfigurerSupport {
     private LettuceConnectionFactory lettuceConnectionFactory;
 
     @Override
-    @Bean
+    @Bean(name = "keyGenerator")
     public KeyGenerator keyGenerator() {
         return new KeyGenerator() {
             @Override
@@ -109,9 +111,15 @@ public class RedisConfig extends CachingConfigurerSupport {
         redisSerializer.setObjectMapper(objectMapper);
 
         RedisCacheConfiguration cacheConfiguration = RedisCacheConfiguration.defaultCacheConfig()
-                .serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(redisSerializer));
+                .serializeValuesWith(RedisSerializationContext
+                        .SerializationPair.fromSerializer(redisSerializer))
+//                设置过期时间 - 按照分钟未单位处理
+                .entryTtl(Duration.ofMinutes(DefaultStringConfig.EXPIRE_TIME));
 
-        RedisCacheManager redisCacheManager = RedisCacheManager.builder(connectionFactory).cacheDefaults(cacheConfiguration).build();
+        RedisCacheManager redisCacheManager = RedisCacheManager
+                .builder(connectionFactory)
+                .cacheDefaults(cacheConfiguration)
+                .build();
 
         return redisCacheManager;
     }

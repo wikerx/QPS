@@ -10,6 +10,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+/**
+ * @author Mr.薛
+ */
 @Import(DynamicDataSourceRegister.class)
 @MapperScan("com.scott.wiker.mapper.*")
 @SpringBootApplication

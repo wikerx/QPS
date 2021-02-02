@@ -39,19 +39,23 @@ spring:
 #        password: TlOe9leZ5myDnMueUekZgw==
 
 
-# ActiveMQ单机配置
-  activemq:
-    user: admin
-    password: admin
-    #    ActiveMQ的访问中心地址
-    broker-url: tcp://106.12.17.213:61616
-    #      fale 连接服务器  true 连接默认
-    in-memory: false
-    #    启动连接池
-    pool:
-      #     true表示使用连接池；false时，每发送一条数据创建一个连接
-      enabled: true
-      #      最大连接数
-      max-connections: 10
-      #     空闲的连接过期时间，默认为30秒
-      idle-timeout: 30000
+
+#p配置zookeeper
+zoo:
+  keeper:
+    #开启标志
+    enabled: true
+    #服务器地址
+    server: 192.168.0.55:2181
+    #命名空间，被称为ZNode
+    namespace: mc_zk
+    #权限控制，加密
+    digest: smile:zmt123456
+    #会话超时时间
+    sessionTimeoutMs: 3000
+    #连接超时时间
+    connectionTimeoutMs: 60000
+    #最大重试次数
+    maxRetries: 2
+    #初始休眠时间
+    baseSleepTimeMs: 1000

@@ -31,11 +31,9 @@
         <mybatis-spring-boot-starter.version>1.3.2</mybatis-spring-boot-starter.version>
         <commons-lang3.version>3.10</commons-lang3.version>
         <lombok.version>1.18.12</lombok.version>
+        <guava.version>18.0</guava.version>
 
         <!--以下是项目内部包结构-->
-        <qps-common-utils.version>v1.0</qps-common-utils.version>
-        <qps-common-entity.version>v1.0</qps-common-entity.version>
-        <qps-common-service.version>v1.0</qps-common-service.version>
         <qps-common-impl.version>v1.0</qps-common-impl.version>
 
     </properties>
@@ -56,22 +54,17 @@
             <version>${lombok.version}</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
         <!--引入内部项目包-->
-        <dependency>
-            <groupId>com.scott</groupId>
-            <artifactId>qps-common-utils</artifactId>
-            <version>${qps-common-utils.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.scott</groupId>
-            <artifactId>qps-common-entity</artifactId>
-            <version>${qps-common-entity.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.scott</groupId>
-            <artifactId>qps-common-service</artifactId>
-            <version>${qps-common-service.version}</version>
-        </dependency>
         <dependency>
             <groupId>com.scott</groupId>
             <artifactId>qps-common-impl</artifactId>

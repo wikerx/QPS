@@ -4,6 +4,8 @@ import com.alibaba.fastjson.JSON;
 import com.scott.wiker.apiversion.ApiVersion;
 import com.scott.wiker.entity.test.Users;
 import com.scott.wiker.service.test.UserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,6 +23,7 @@ import java.util.List;
  * @status : 编写
  **/
 @Slf4j
+@Api("接口版本管理-v2")
 @ApiVersion(2)
 @RequestMapping(value = "online/{version}")
 @RestController
@@ -30,6 +33,7 @@ public class Version2Controller {
     private UserService userService;
 
 
+    @ApiOperation(value = "查询主节点数据-v2")
     @PostMapping(value = "test")
     public Object test(){
         log.info("这是version = 2");
